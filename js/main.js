@@ -54,11 +54,9 @@ window.changeGlass = changeGlass;
 let changeBtn = (boolean) => {
     if (boolean) {
         avatar.querySelector('img').classList.add('d-block');
-        glassesInfo.classList.add('d-block');
         return;
     }
     avatar.querySelector('img').classList.remove('d-block');
-    glassesInfo.classList.remove('d-block');
 
 }
 window.changeBtn = changeBtn;
