@@ -36,7 +36,6 @@ h2{
     background-position: center top;
     background-size: cover;
     height: 600px;
-    
 }
 
 .vglasses__model img{
@@ -46,6 +45,7 @@ h2{
     width: 238px;
     height: 85px;
     opacity: 0.9;
+    display: none;
 }
 
 .vglasses__card{

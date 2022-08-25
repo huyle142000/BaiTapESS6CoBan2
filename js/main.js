@@ -31,10 +31,10 @@ let showGlassesList = () => {
 showGlassesList();
 let changeGlass = (id) => {
     dataGlasses.map((glasses) => {
-        let {virtualImg, brand, name, color, price, description } = glasses;
+        let { virtualImg, brand, name, color, price, description } = glasses;
         if (glasses.id === id) {
             avatar.innerHTML = `
-            <img src="${virtualImg}" class="img-fluid">
+            <img src="${virtualImg}" class="img-fluid vglasses__img-glass">
         `
             glassesInfo.innerHTML = `
             <h2 style="color:white;font-size:24px">${name} - ${brand} (${color})<h2>
@@ -44,8 +44,21 @@ let changeGlass = (id) => {
             </div>
             <p style="color:white;font-size:14px">${description}</p>
             `
-            glassesInfo.classList.add('d-block')
+            glassesInfo.classList.add('d-block');
+            avatar.querySelector('img').classList.add('d-block');
+
         }
     })
 }
 window.changeGlass = changeGlass;
+let changeBtn = (boolean) => {
+    if (boolean) {
+        avatar.querySelector('img').classList.add('d-block');
+        glassesInfo.classList.add('d-block');
+        return;
+    }
+    avatar.querySelector('img').classList.remove('d-block');
+    glassesInfo.classList.remove('d-block');
+
+}
+window.changeBtn = changeBtn;
